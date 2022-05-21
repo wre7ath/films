@@ -6,6 +6,14 @@
     src: url(static/fonts/doris-vf.woff2) format('woff2');
 }
 
+@font-face {
+    font-family: 'Iran Marker';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(static/fonts/IRANMarker.woff2) format('woff2');
+}
+
 :root {
     --c-falch: #ead44c;
     --c-waken: #9a7e84;
@@ -32,7 +40,14 @@ body {
     background-color: var(--c-grey-l);
     color: var(--c-text-l);
     scrollbar-gutter: auto;
+}
+
+html[dir="ltr"] {
     font-family: 'Dosis', sans-serif;
+}
+
+html[dir="rtl"] {
+    font-family: 'Iran Marker', sans-serif;
 }
 
 body {
@@ -113,10 +128,7 @@ p {
     justify-content: center;
     align-items: center;
 
-
     background-color: var(--c-black);
-
-
 }
 
 .waken-hero-title {}

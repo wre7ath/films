@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -55,6 +55,187 @@
     }
     </script>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#bc9ea4">
+
+    <style>
+        @font-face {
+            font-family: 'Dosis';
+            font-style: normal;
+            font-weight: 200 800;
+            font-display: swap;
+            src: url(static/fonts/doris-vf.woff2) format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Iran Marker';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(static/fonts/IRANMarker.woff2) format('woff2');
+        }
+
+        :root {
+            --c-falch: #ead44c;
+            --c-waken: #9a7e84;
+            --c-waken-l: #bc9ea4;
+            --c-black: #111111;
+            --c-text: #212121;
+            --c-white: #fcfcfc;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            font-family: inherit;
+        }
+
+        html,
+        body {
+            scroll-behavior: smooth;
+            background-color: var(--c-grey-l);
+            color: var(--c-text-l);
+            scrollbar-gutter: auto;
+        }
+
+        html[dir="ltr"] {
+            font-family: 'Dosis', sans-serif;
+        }
+
+        html[dir="rtl"] {
+            font-family: 'Iran Marker', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        a,
+        button {
+            border: none;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .screen-reader-text {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        [hidden] {
+            display: none;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        /* End of HTML Reset */
+
+        @media only screen and (min-width:1200px) {
+            body {
+                font-size: 150%
+            }
+        }
+
+        @media only screen and (min-width:2000px) {
+            body {
+                font-size: 200%
+            }
+        }
+
+        [class*=flex] {
+            display: flex;
+        }
+
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .flex-row {
+            flex-wrap: wrap;
+        }
+
+        .waken-hero {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: var(--c-black);
+        }
+
+        .waken-hero-title {}
+
+        .waken-hero h1 {
+            text-align: center;
+            animation: tracking-in-expand 1s steps(20, end) infinite alternate both;
+            font-size: 9em;
+            margin-bottom: 8vh;
+            font-weight: 600;
+
+            color: transparent;
+            -webkit-text-stroke-width: 0.01em;
+            -webkit-text-stroke-color: var(--c-waken);
+        }
+
+        @keyframes tracking-in-expand {
+            0% {
+                opacity: 0;
+            }
+
+
+            100% {
+                opacity: 0.75;
+            }
+        }
+
+
+        .waken-hero h2,
+        .waken-hero h3 {
+            filter: blur(4px);
+            transform: scale(1.5);
+            opacity: 0;
+            text-align: center;
+        }
+
+        .waken-hero h3 {
+            font-weight: 350;
+            margin-bottom: 0.5em;
+        }
+    </style>
 
 </head>
 
