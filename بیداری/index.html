@@ -68,7 +68,7 @@
             font-style: normal;
             font-weight: 200 800;
             font-display: swap;
-            src: url(static/fonts/doris-vf.woff2) format('woff2');
+            src: url(/waken/static//fonts/doris-vf.woff2) format('woff2');
         }
 
         @font-face {
@@ -76,7 +76,7 @@
             font-style: normal;
             font-weight: 400;
             font-display: swap;
-            src: url(static/fonts/IRANMarker.woff2) format('woff2');
+            src: url(/waken/static//fonts/IRANMarker.woff2) format('woff2');
         }
 
         :root {
@@ -113,9 +113,19 @@
 
         html[dir="rtl"] {
             font-family: 'Iran Marker', sans-serif;
+            font-size: 0.9em;
+        }
+
+        html[dir="rtl"] body {
+            line-height: 2;
         }
 
         body {
+            overflow: hidden;
+        }
+
+        .loaded body {
+            overflow-y: auto;
             overflow-x: hidden;
         }
 
@@ -196,28 +206,25 @@
             background-color: var(--c-black);
         }
 
-        .waken-hero-title {}
-
-        .waken-hero h1 {
+        .waken-hero svg {
             text-align: center;
-            animation: tracking-in-expand 1s steps(20, end) infinite alternate both;
-            font-size: 9em;
-            margin-bottom: 8vh;
-            font-weight: 600;
-
-            color: transparent;
-            -webkit-text-stroke-width: 0.01em;
-            -webkit-text-stroke-color: var(--c-waken);
+            width: 50vw;
+            fill: #21212120;
+            stroke: var(--c-waken);
+            display: block;
+            margin: 0 auto 8vh;
+            stroke-width: 0.15em;
+            animation: tracking-in-expand 1s steps(12, end) infinite alternate both;
         }
 
         @keyframes tracking-in-expand {
             0% {
-                opacity: 0;
+                stroke-opacity: 0.01;
             }
 
 
             100% {
-                opacity: 0.75;
+                stroke-opacity: 0.75;
             }
         }
 
