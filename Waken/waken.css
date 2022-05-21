@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 200 800;
     font-display: swap;
-    src: url(static/fonts/doris-vf.woff2) format('woff2');
+    src: url(/waken/static//fonts/doris-vf.woff2) format('woff2');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(static/fonts/IRANMarker.woff2) format('woff2');
+    src: url(/waken/static//fonts/IRANMarker.woff2) format('woff2');
 }
 
 :root {
@@ -48,9 +48,19 @@ html[dir="ltr"] {
 
 html[dir="rtl"] {
     font-family: 'Iran Marker', sans-serif;
+    font-size: 0.9em;
+}
+
+html[dir="rtl"] body {
+    line-height: 2;
 }
 
 body {
+    overflow: hidden;
+}
+
+.loaded body {
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -131,26 +141,25 @@ p {
     background-color: var(--c-black);
 }
 
-.waken-hero-title {}
-
 .waken-hero svg {
     text-align: center;
-    animation: tracking-in-expand 1s steps(20, end) infinite alternate both;
-    margin-bottom: 8vh;
-
-    fill: transparent;
+    width: 50vw;
+    fill: #21212120;
     stroke: var(--c-waken);
+    display: block;
+    margin: 0 auto 8vh;
     stroke-width: 0.15em;
+    animation: tracking-in-expand 1s steps(12, end) infinite alternate both;
 }
 
 @keyframes tracking-in-expand {
     0% {
-        opacity: 0;
+        stroke-opacity: 0.01;
     }
 
 
     100% {
-        opacity: 0.75;
+        stroke-opacity: 0.75;
     }
 }
 
@@ -168,13 +177,14 @@ p {
     margin-bottom: 0.5em;
 }
 
-.loaded .waken-hero h1 {
+.loaded .waken-hero svg {
     transition: all 0.5s ease;
     animation-play-state: paused;
     animation: none;
-    letter-spacing: 0.01;
-    color: var(--c-waken-l);
+    fill: var(--c-waken-l);
     opacity: 1;
+    stroke-width: 0;
+
 }
 
 .loaded .waken-hero h2,
@@ -356,13 +366,14 @@ p {
 
 h2.title {
     color: var(--c-waken);
-    margin-bottom: .75em;
+    margin-bottom: 1.25em;
     padding: .25em 1em;
     background: var(--c-falch);
-    border-radius: 0.33em 0.33em 2.5em 0.33em;
+    border-radius: 0.33em 0.33em 0.33em 0.33em;
     display: inline-block;
     box-shadow: 0 1px 5px -2px var(--c-black);
 }
+
 
 .waken-info .waken-info-contents p {
     color: var(--c-white);
@@ -396,23 +407,40 @@ h2.title {
     margin-bottom: 0.25em;
 }
 
+html[dir="rtl"] .waken-info .waken-info-contents .content-item .cast-wrapper .cast-item h3{
+    margin-bottom: -0.25em;
+}
 
 .waken-info .waken-info-contents .content-item .cast-wrapper .cast-item .cast-links {
     margin-top: 1em;
 }
 
 .waken-info .waken-info-contents .content-item .cast-wrapper .cast-item .cast-links a {
-    width: 2em;
-    height: 2em;
+    width: 2.25em;
+    height: 2.25em;
     border-radius: 0.25em;
     border: 1px solid var(--c-icon);
+    transition: 0.25s ease-in-out;
+    margin: 0.25em 1em;
+    padding: 0 0.25em;
+}
+
+.waken-info .waken-info-contents .content-item .cast-wrapper .cast-item .cast-links a:hover,
+.waken-info .waken-info-contents .content-item .cast-wrapper .cast-item .cast-links a:active {
+    background-color: var(--c-icon);
+
 }
 
 .waken-info .waken-info-contents .content-item .cast-wrapper .cast-item .cast-links a svg {
     width: 100%;
     height: 100%;
+    transition: 0.25s ease-in-out;
 }
 
+.waken-info .waken-info-contents .content-item .cast-wrapper .cast-item .cast-links a:hover svg path,
+.waken-info .waken-info-contents .content-item .cast-wrapper .cast-item .cast-links a:active svg path{
+    fill: var(--c-white);
+}
 
 .waken-info .waken-info-contents .content-item .cast-wrapper .cast-item h4 {
     color: var(--c-falch);
@@ -527,7 +555,14 @@ h2.title {
     --plyr-color-main: var(--c-falch);
     --plyr-captions-text-color: var(--c-white);
     --plyr-range-fill-background: var(--c-waken);
+}
+
+html[dir="ltr"] .plyr--video {
     font-family: "Dosis";
+}
+
+html[dir="rtl"] .plyr--video {
+    font-family: "Iran Marker";
 }
 
 .plyr--stopped.plyr__poster-enabled .plyr__poster {
@@ -568,6 +603,10 @@ h2.title {
     transition: all 0.45s ease-in-out
 }
 
+html[dir="rtl"] .waken-links a {
+    font-size: 0.8em;
+}
+
 .waken-links a:hover,
 .waken-links a:active {
     background: var(--c-falch);
@@ -576,6 +615,11 @@ h2.title {
 
 .waken-links a .svg-icon {
     margin-right: 0.35em;
+}
+
+html[dir="rtl"] .waken-links a .svg-icon {
+    margin-right: 0;
+    margin-left: 0.35em;
 }
 
 .waken-links a .svg-icon svg {

@@ -104,25 +104,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // let elements = '';
-
-    // for (let index = 12; index < 41; index++) {
-
-    //     let element = ' <picture> <source media="(min-width:650px)" srcset="assets/img/animation/frame-0' + index + '-3000.avif" type="image/avif" /> <source media="(min-width:650px)" srcset="assets/img/animation/frame-0' + index + '-3000.webp" type="image/webp" /> <source media="(min-width:650px)" srcset="assets/img/animation/frame-0' + index + '.jpg" /> <source srcset="assets/img/animation/frame-0' + index + '-min.avif" type="image/avif" /> <source srcset="assets/img/animation/frame-0' + index + '-min.webp" type="image/webp" /> <source srcset="assets/img/animation/frame-0' + index + '-min.jpg" /> <img src="assets/img/animation/frame-0' + index + '.jpg" class="img-sequence" alt="waken short film animation" /> </picture>';
-    //     elements = elements + element;
-
-    //     if (index == 40) {
-    //         console.log(elements);
-    //     }
-    // }
-
-
-
     setTimeout(() => {
-        //document.body.classList.add("loaded");
+        document.documentElement.classList.add("loaded");
     }, 4000);
-
-
-
 
 });
