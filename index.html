@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Falch Arts Productions</title>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#bc9ea4">
+</head>
+
+<body>
+
+    <section class="films-hero flex-center flex-col">
+
+        <div class="falch-neon">
+            <h1 class="neon" data-text="U">Fa<span class="flicker-slow">lch</span>A<span class="flicker-fast">rts</span>
+            </h1>
+        </div>
+
+        <div class="falch-links">
+            <a href="/Waken" class="english flex-center">
+                <img src="https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-english.jpg"
+                    alt="Waken Poster">
+                <h2>About Waken Short Film</h2>
+            </a>
+            <a href="/بیداری" class="farsi flex-center">
+                <img src="https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-persian.jpg"
+                    alt="پوستر فیلم کوتاه بیداری">
+                <h2>درباره فیلم کوتاه بیداری</h2>
+            </a>
+        </div>
+
+    </section>
+
+    <style>
+        @font-face {
+            font-family: 'Dosis';
+            font-style: normal;
+            font-weight: 200 800;
+            font-display: swap;
+            src: url(/Waken/static/fonts/doris-vf.woff2) format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Iran Marker';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(/Waken/static/fonts/IRANMarker.woff2) format('woff2');
+        }
+
+        :root {
+            --c-falch: #ead44c;
+            --c-waken: #9a7e84;
+            --c-waken-l: #bc9ea4;
+            --c-black: #111111;
+            --c-text: #212121;
+            --c-white: #fcfcfc;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            font-family: inherit;
+        }
+
+        html,
+        body {
+            scroll-behavior: smooth;
+            background-color: var(--c-grey-l);
+            color: var(--c-text-l);
+            scrollbar-gutter: auto;
+        }
+
+        body {
+            font-size: 100%;
+        }
+
+        @media only screen and (min-width:1200px) {
+            body {
+                font-size: 150%
+            }
+        }
+
+        @media only screen and (min-width:2000px) {
+            body {
+                font-size: 200%
+            }
+        }
+
+        [class*=flex] {
+            display: flex;
+        }
+
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-col {
+            flex-flow: column;
+        }
+
+        .farsi {
+            font-family: Iran Marker;
+            text-align: right;
+            direction: rtl;
+        }
+
+        .english {
+            font-family: Dosis;
+        }
+
+        .films-hero {
+            background-color: var(--c-black);
+            position: fixed;
+            height: 100%;
+            width: 100%;
+        }
+
+        .falch-neon h1 {
+            font-family: 'Dosis', cursive;
+            font-size: 4em;
+            color: #FFD5FF;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA, 40px 0vw 200px #D42CCA;
+        }
+
+        .flicker-slow {
+            animation: flicker 3s linear infinite;
+        }
+
+        .flicker-fast {
+            animation: flicker 1s linear infinite;
+        }
+
+        @keyframes flicker {
+
+            0%,
+            19.999%,
+            22%,
+            62.999%,
+            64%,
+            64.999%,
+            70%,
+            100% {
+                opacity: .99;
+
+            }
+
+            20%,
+            21.999%,
+            63%,
+            63.999%,
+            65%,
+            69.999% {
+                opacity: 0.4;
+            }
+        }
+
+        .falch-links {
+            margin-top: 1em;
+        }
+
+        .falch-links a {
+            color: var(--c-waken);
+            margin: 1em 0;
+        }
+
+        .falch-links a h2 {
+            font-size: 1em;
+        }
+
+        .falch-links a img {
+            max-height: 20vh;
+            margin: 0 0.5em;
+            border-radius: 0.35em;
+            transition:  all 0.25s ease-in-out;
+        }
+
+        .falch-links a:hover img,
+        .falch-links a:active img {
+            transform: scale(1.15);
+        }
+    </style>
+
+</body>
+
+</html>

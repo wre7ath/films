@@ -1,1 +1,4 @@
+CheckSpelling On
 CheckCaseOnly On
+RewriteEngine On
+

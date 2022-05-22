@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    imgSequence[13].onload = function (){
+    imgSequence[10].onload = function (){
         document.documentElement.classList.add("loaded");
     }
 

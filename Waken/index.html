@@ -12,19 +12,19 @@
         content="Khatereh begins her first and last night-time journey. A short film by Amir Kalateh & Nasser Amin.">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://films.falcharts.com/waken">
+    <meta property="og:url" content="https://films.falcharts.com/Waken">
     <meta property="og:title" content="Waken Short Film | Falch Arts Production">
     <meta property="og:description"
         content="Khatereh begins her first and last night-time journey. A short film by Amir Kalateh & Nasser Amin.">
-    <meta property="og:image" content="https://films.falcharts.com/waken/assets/img/Waken-shortfilm-poster-english.jpg">
+    <meta property="og:image" content="https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-english.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://films.falcharts.com/waken">
+    <meta property="twitter:url" content="https://films.falcharts.com/Waken">
     <meta property="twitter:title" content="Waken Short Film | Falch Arts Production">
     <meta property="twitter:description"
         content="Khatereh begins her first and last night-time journey. A short film by Amir Kalateh & Nasser Amin.">
     <meta property="twitter:image"
-        content="https://films.falcharts.com/waken/assets/img/Waken-shortfilm-poster-english.jpg">
+        content="https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-english.jpg">
 
 
     <script type="application/ld+json">
@@ -64,6 +64,22 @@
     <meta name="theme-color" content="#bc9ea4">
 
     <style>
+        @font-face {
+            font-family: 'Dosis';
+            font-style: normal;
+            font-weight: 200 800;
+            font-display: swap;
+            src: url(/Waken/static/fonts/doris-vf.woff2) format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Iran Marker';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(/Waken/static/fonts/IRANMarker.woff2) format('woff2');
+        }
+
         :root {
             --c-falch: #ead44c;
             --c-waken: #9a7e84;
@@ -227,6 +243,15 @@
             margin-bottom: 0.5em;
         }
     </style>
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K5ZK9LL');</script>
 
 </head>
 
@@ -1013,7 +1038,8 @@
                     <h2 class="title">Trailer</h2>
                     <div class="video-player-wrapper">
                         <video id="wakenTrailer" playsinline controls>
-                            <source data-src="assets/video/Waken Trailer.mp4" type="video/mp4" size="1080" />
+                            <source src="assets/video/Waken Trailer.mp4" type="video/mp4" size="1080" />
+                            <track kind="captions" label="English captions" src="assets/video/Waken-Trailer.vtt" srclang="en" default />
                         </video>
                     </div>
                 </div>
@@ -1025,7 +1051,7 @@
         <section class="waken-links">
 
             <div class="content flex-row">
-                <a class="flex-center" href="/Waken/assets/waken-presskit-en.pdf" download>
+                <a class="flex-center" href="assets/waken-presskit-en.pdf" download>
                     <i class="svg-icon flex-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1041,7 +1067,8 @@
 
                 </a>
 
-                <a href="https://soundcloud.com/amir-kalateh-250417605/awakening-end-score" class="flex-center" target="_blank" rel="noopener">
+                <a href="https://soundcloud.com/amir-kalateh-250417605/awakening-end-score" class="flex-center"
+                    target="_blank" rel="noopener">
                     <i class="svg-icon flex-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1118,8 +1145,6 @@
         window.lazySizesConfig.init = false;
 
     </script>
-
-    <link rel="preload" href="/Waken/static/fonts/doris-vf.woff2" as="font" type="font/woff2"  crossorigin>
 
     <link rel="stylesheet" href="/Waken/plyr.css">
     <link rel="stylesheet" href="/Waken/waken.css">

@@ -16,7 +16,7 @@
     <meta property="og:description"
         content="خاطره سفر شبانه خودش را با یک تصمیم... فیلم کوتاه ساخته ناصر امین و امیر کلاته">
     <meta property="og:image"
-        content="https://films.falcharts.com/waken//waken/assets/img/Waken-shortfilm-poster-persian.jpg">
+        content="https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-persian.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://films.falcharts.com/بیداری">
@@ -24,7 +24,7 @@
     <meta property="twitter:description"
         content="خاطره سفر شبانه خودش را با یک تصمیم... فیلم کوتاه ساخته ناصر امین و امیر کلاته">
     <meta property="twitter:image"
-        content="https://films.falcharts.com/waken//waken/assets/img/Waken-shortfilm-poster-persian.jpg">
+        content="https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-persian.jpg">
 
 
     <script type="application/ld+json">
@@ -32,7 +32,7 @@
       "@context" : "http://schema.org",
       "@type" : "Movie",
       "name" : "Waken",
-      "image" : "https://films.falcharts.com/waken//waken/assets/img/Waken-shortfilm-poster-persian.jpg",
+      "image" : "https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-persian.jpg",
       "url" : "https://www.themoviedb.org/movie/949414-waken",
       "datePublished" : "2021-11-12",
       "actor" : [ {
@@ -63,6 +63,22 @@
     <meta name="theme-color" content="#bc9ea4">
 
     <style>
+        @font-face {
+            font-family: 'Dosis';
+            font-style: normal;
+            font-weight: 200 800;
+            font-display: swap;
+            src: url(/Waken/static/fonts/doris-vf.woff2) format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Iran Marker';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(/Waken/static/fonts/IRANMarker.woff2) format('woff2');
+        }
+
         :root {
             --c-falch: #ead44c;
             --c-waken: #9a7e84;
@@ -227,6 +243,14 @@
         }
     </style>
 
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K5ZK9LL');</script>
 </head>
 
 <body>
@@ -1017,7 +1041,8 @@
                     <h2 class="title">تریلر</h2>
                     <div class="video-player-wrapper">
                         <video id="wakenTrailer" playsinline controls>
-                            <source data-src="/waken/assets/video/Waken Trailer.mp4" type="video/mp4" size="1080" />
+                            <source src="/waken/assets/video/Waken Trailer.mp4" type="video/mp4" size="1080" />
+                            <track kind="captions" label="English captions" src="/Waken/assets/video/Waken-Trailer.vtt" srclang="en" default />
                         </video>
                     </div>
                 </div>
@@ -1045,7 +1070,8 @@
 
                 </a>
 
-                <a href="https://soundcloud.com/amir-kalateh-250417605/awakening-end-score" class="flex-center" target="_blank" rel="noopener">
+                <a href="https://soundcloud.com/amir-kalateh-250417605/awakening-end-score" class="flex-center"
+                    target="_blank" rel="noopener">
                     <i class="svg-icon flex-center">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1095,7 +1121,7 @@
                     </i>
 
                     <h2>
-                        @falchArts
+                        FalchArts@
                     </h2>
                 </a>
             </div>
@@ -1123,8 +1149,6 @@
         window.lazySizesConfig.init = false;
 
     </script>
-
-    <link rel="preload" href="/Waken/static/fonts/IRANMarker.woff2" as="font" type="font/woff2">
 
     <link rel="stylesheet" href="/Waken/plyr.css">
     <link rel="stylesheet" href="/Waken/waken.css">
