@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 200 800;
     font-display: swap;
-    src: url(/waken/static/fonts/doris-vf.woff2) format('woff2');
+    src: url(/Waken/static/fonts/doris-vf.woff2) format('woff2');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/waken/static/fonts/IRANMarker.woff2) format('woff2');
+    src: url(/Waken/static/fonts/IRANMarker.woff2) format('woff2');
 }
 
 :root {
@@ -323,7 +323,6 @@ p {
     left: 0;
     position: sticky;
     object-fit: cover;
-    display: none;
     z-index: 5;
     transform-origin: left;
     overflow: hidden;
@@ -332,7 +331,11 @@ p {
     will-change: transform;
 }
 
-.show {
+.loaded .img-sequence{
+    display: none;
+}
+
+.loaded .img-sequence.show {
     display: block;
     z-index: 10;
 }
@@ -625,6 +628,8 @@ html[dir="rtl"] .waken-links a .svg-icon {
 .waken-links a .svg-icon svg {
     transition: all 0.3s ease-in-out;
     fill: var(--c-falch);
+    width: 1.5em;
+    height: 1.5em;
 
 }
 

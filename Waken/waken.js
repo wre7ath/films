@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+    lazySizes.init();
 
     const player = new Plyr('#wakenTrailer', {
         enabled: true,
