@@ -1,4 +1,4 @@
-CheckSpelling On
-CheckCaseOnly On
-RewriteEngine On
-
+<IfModule mod_speling.c>
+    CheckSpelling On
+    CheckCaseOnly on
+</IfModule>
