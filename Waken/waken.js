@@ -105,8 +105,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    setTimeout(() => {
+    imgSequence[13].onload = function (){
         document.documentElement.classList.add("loaded");
-    }, 4000);
+    }
 
 });
