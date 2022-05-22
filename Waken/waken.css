@@ -552,8 +552,7 @@ html[dir="rtl"] .waken-synopsis .content .title {
 .waken-synopsis {}
 
 .waken-synopsis .content .title {
-    width: 50%;
-    margin: auto;
+    width: 100%;
 }
 
 .waken-synopsis .content .text-wrapper {
@@ -599,6 +598,11 @@ html[dir="rtl"] .plyr--video {
     width: 100%;
     max-width: 95%;
     min-height: unset;
+}
+
+.waken-trailer .title {
+    width: 50%;
+    margin: auto;
 }
 
 .waken-links {
