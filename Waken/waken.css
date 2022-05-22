@@ -601,8 +601,8 @@ html[dir="rtl"] .plyr--video {
 }
 
 .waken-trailer .title {
-    width: 50%;
-    margin: auto;
+    width: 50% !important;
+    margin: auto !important;
 }
 
 .waken-links {
