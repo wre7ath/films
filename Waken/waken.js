@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
     let animationWrapper,
         animationWrapperHeight,
         animationWrapperofset,
@@ -21,21 +22,20 @@ window.addEventListener('DOMContentLoaded', () => {
         perImage;
 
 
+    imgSequence = document.querySelectorAll(".img-sequence");
+
     function animationInit() {
         animationWrapper = document.querySelector(".waken-animation");
-        animationWrapperHeight = animationWrapper.clientHeight;
         animationWrapperofset = animationWrapper.getBoundingClientRect().top + window.pageYOffset || document.documentElement.scrollTop;
+        animationWrapperHeight = animationWrapper.clientHeight + window.innerHeight;
         animationContainer = document.querySelector(".image-animation-container");
-        imgSequence = document.querySelectorAll(".img-sequence");
-
-        animationControl = 55;
+        animationControl = (innerWidth < 700) ? innerHeight * 1.8 :  innerHeight * 2.5;
+        animationControl = (animationControl / animationWrapperHeight) * 100;
         perImage = animationControl / imgSequence.length;
     }
 
     animationInit();
     window.onresize = animationInit;
-
-
 
     window.addEventListener('scroll', event => {
 
@@ -47,8 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
         );
 
         scrolling(scrolled);
-
-    }, { passive: true });
+    });
 
 
     function scrolling(scrolled) {
@@ -60,6 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             let scrollIndex = elementScrolled / perImage;
             scrollIndex = scrollIndex.toFixed();
+
 
             if (scrollIndex < imgSequence.length) {
                 for (let index = 0; index < imgSequence.length; index++) {
@@ -75,8 +75,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (window.innerWidth > 700) {
                     position = 50 - (elementScrolled * 0.45);
                 } else {
-                    position = 50 - (elementScrolled * 0.505);
+                    position = 45 - (elementScrolled * 0.86);
                 }
+
 
                 animationContainer.style.setProperty('--scale', scale);
                 animationContainer.style.setProperty('--position', position + "%");
@@ -93,19 +94,18 @@ window.addEventListener('DOMContentLoaded', () => {
                     }
                 }
                 imgSequence[28].classList.add("show");
-
             }
         }
 
 
         if (scrolled > (animationWrapperofset * 0.5) && scrolled < animationWrapperHeight) {
             animationContainer.classList.add("reveal");
-        } else if (scrolled < animationWrapperofset || scrolled > (animationWrapperHeight * 1.15)) {
+        } else if (scrolled < animationWrapperofset || scrolled > (animationWrapperHeight * 1.25)) {
             animationContainer.classList.remove("reveal");
         }
     }
 
-    imgSequence[10].onload = function (){
+    imgSequence[15].onload = function () {
         document.documentElement.classList.add("loaded");
     }
 

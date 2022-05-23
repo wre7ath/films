@@ -343,15 +343,13 @@ body::-webkit-scrollbar-thumb {
     position: sticky;
     object-fit: cover;
     z-index: 5;
+    display: none;
     transform-origin: left;
     overflow: hidden;
-    transform: scale(var(--scale));
+    transform: scale(var(--scale)), translate3d(0, 0, 0);
     object-position: var(--position);
     will-change: transform;
-}
-
-.loaded .img-sequence {
-    display: none;
+    transition: all 0.1s ease;
 }
 
 .loaded .img-sequence.show {
@@ -369,6 +367,13 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     z-index: 30;
 }
+
+@media only screen and (max-width:700px) {
+    .waken-info {
+        padding-top: 180vh;
+    }
+}
+
 
 .waken-info .waken-info-contents {
     width: clamp(300px, 80%, 1200px);
@@ -417,8 +422,9 @@ h2.title {
 
 .waken-info .waken-info-contents .content-item .cast-wrapper .cast-item img {
     border-radius: 50%;
-    width: 10em;
-    height: 10em;
+    width: auto;
+    min-height: 25vh;
+    max-height: 25vh;
     object-fit: cover;
     margin-bottom: 0.5em;
     box-shadow: 0 2px 6px -1px var(--c-black);
@@ -532,7 +538,6 @@ html[dir="rtl"] .waken-synopsis .content .title {
     border-radius: 0 0 0.75em 0.75em;
 }
 
-.crew-info .crew-items table tr {}
 
 .crew-info .crew-items table tr td {
     padding: 0.25em 0.5em 0.75em;
@@ -549,7 +554,6 @@ html[dir="rtl"] .waken-synopsis .content .title {
     letter-spacing: 0.025em;
 }
 
-.waken-synopsis {}
 
 .waken-synopsis .content .title {
     width: 100%;
@@ -609,7 +613,6 @@ html[dir="rtl"] .plyr--video {
     background-color: var(--c-black);
 }
 
-.waken-links .falch-logo {}
 
 .waken-links .falch-logo img {
     display: block;
