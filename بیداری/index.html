@@ -15,8 +15,7 @@
     <meta property="og:title" content="فیلم کوتاه بیداری | اثر فالش">
     <meta property="og:description"
         content="خاطره سفر شبانه خودش را با یک تصمیم... فیلم کوتاه ساخته ناصر امین و امیر کلاته">
-    <meta property="og:image"
-        content="https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-persian.jpg">
+    <meta property="og:image" content="https://films.falcharts.com/Waken/assets/img/Waken-shortfilm-poster-persian.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://films.falcharts.com/بیداری">
@@ -50,7 +49,7 @@
         "name" : "ناصر امین"
       }, {
         "@type" : "Person",
-        "name" : "Amir Kalateh"
+        "name" : "امیرحسین کلاته"
       } ]
     }
     </script>
@@ -62,186 +61,6 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#bc9ea4">
 
-    <style>
-        @font-face {
-            font-family: 'Dosis';
-            font-style: normal;
-            font-weight: 200 800;
-            font-display: swap;
-            src: url(/Waken/static/fonts/doris-vf.woff2) format('woff2');
-        }
-
-        @font-face {
-            font-family: 'Iran Marker';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(/Waken/static/fonts/IRANMarker.woff2) format('woff2');
-        }
-
-        :root {
-            --c-falch: #ead44c;
-            --c-waken: #9a7e84;
-            --c-waken-l: #bc9ea4;
-            --c-black: #111111;
-            --c-text: #212121;
-            --c-white: #fcfcfc;
-        }
-
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            outline: none;
-            font-family: inherit;
-        }
-
-        html,
-        body {
-            scroll-behavior: smooth;
-            background-color: var(--c-grey-l);
-            color: var(--c-text-l);
-            scrollbar-gutter: auto;
-        }
-
-        html[dir="ltr"] {
-            font-family: 'Dosis', sans-serif;
-        }
-
-        html[dir="rtl"] {
-            font-family: 'Iran Marker', sans-serif;
-            font-size: 0.9em;
-        }
-
-        html[dir="rtl"] body {
-            line-height: 2;
-        }
-
-        body {
-            overflow: hidden;
-        }
-
-        .loaded body {
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-
-        a,
-        button {
-            border: none;
-            cursor: pointer;
-            background: transparent;
-        }
-
-        button:disabled {
-            cursor: not-allowed;
-            pointer-events: none;
-        }
-
-        i {
-            font-style: normal;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        .screen-reader-text {
-            display: none;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        [hidden] {
-            display: none;
-        }
-
-        p {
-            font-size: 1em;
-        }
-
-        /* End of HTML Reset */
-
-        @media only screen and (min-width:1200px) {
-            body {
-                font-size: 150%
-            }
-        }
-
-        @media only screen and (min-width:2000px) {
-            body {
-                font-size: 200%
-            }
-        }
-
-        [class*=flex] {
-            display: flex;
-        }
-
-        .flex-center {
-            justify-content: center;
-            align-items: center;
-        }
-
-        .flex-col {
-            flex-direction: column;
-        }
-
-        .flex-row {
-            flex-wrap: wrap;
-        }
-
-        .waken-hero {
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background-color: var(--c-black);
-        }
-
-        .waken-hero svg {
-            text-align: center;
-            width: 50vw;
-            fill: #21212120;
-            stroke: var(--c-waken);
-            display: block;
-            margin: 0 auto 8vh;
-            stroke-width: 0.15em;
-            animation: tracking-in-expand 1s steps(12, end) infinite alternate both;
-        }
-
-        @keyframes tracking-in-expand {
-            0% {
-                stroke-opacity: 0.01;
-            }
-
-
-            100% {
-                stroke-opacity: 0.75;
-            }
-        }
-
-
-        .waken-hero h2,
-        .waken-hero h3 {
-            filter: blur(4px);
-            transform: scale(1.5);
-            opacity: 0;
-            text-align: center;
-        }
-
-        .waken-hero h3 {
-            font-weight: 350;
-            margin-bottom: 0.5em;
-        }
-    </style>
 
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -251,10 +70,25 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-K5ZK9LL');</script>
+
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" href="/assets/plyr/plyr.css">
+    <link rel="stylesheet" href="/assets/pages/waken/waken.css?ver=2.0.0">
+    <script defer src="/assets/plyr/plyr.js"></script>
+    <script defer src="/assets/lazysizes/lazysizes.js"></script>
+    <script defer src="/assets/pages/waken/waken.js?ver=2.0.0"></script>
+    
 </head>
 
 <body>
     <main>
+
+        <script>
+            window.lazySizesConfig = window.lazySizesConfig || {};
+    
+            lazySizesConfig.loadMode = 1;
+            lazySizesConfig.preloadClass = 'img-sequence';
+            window.lazySizesConfig.init = false;
+        </script>
 
         <section class="waken-hero">
             <div class="waken-hero-content">
@@ -268,6 +102,13 @@
                         <div class="waken-hero-title">
                             <h3>فیلم کوتاهی از :</h3>
                             <h2>ناصر امین و امیر کلاته</h2>
+                        </div>
+                    </div>
+                    <div class="scroll-down-wrapper flex-center">
+                        <div class="noob-finder">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
                 </div>
@@ -1042,7 +883,8 @@
                     <div class="video-player-wrapper">
                         <video id="wakenTrailer" playsinline controls>
                             <source src="/Waken/assets/video/Waken Trailer.mp4" type="video/mp4" size="1080" />
-                            <track kind="captions" label="English captions" src="/Waken/assets/video/Waken-Trailer.vtt" srclang="en" default />
+                            <track kind="captions" label="English captions" src="/Waken/assets/video/Waken-Trailer.vtt"
+                                srclang="en" default />
                         </video>
                     </div>
                 </div>
@@ -1140,21 +982,6 @@
 
 
     </main>
-
-    <script>
-        window.lazySizesConfig = window.lazySizesConfig || {};
-
-        lazySizesConfig.loadMode = 1;
-        lazySizesConfig.preloadClass = 'img-sequence';
-        window.lazySizesConfig.init = false;
-
-    </script>
-
-    <link rel="stylesheet" href="/Waken/plyr.css">
-    <link rel="stylesheet" href="/Waken/waken.css">
-    <script src="/Waken/plyr.js"></script>
-    <script src="/Waken/lazysizes.js"></script>
-    <script src="/Waken/waken.js"></script>
 </body>
 
 </html>

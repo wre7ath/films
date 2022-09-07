@@ -227,6 +227,47 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+.scroll-down-wrapper{
+    margin-top: 3em;
+}
+
+
+.loaded .noob-finder span{
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-bottom: 2px solid var(--c-waken);
+	border-right: 2px solid var(--c-waken);
+	transform: rotate(45deg);
+	margin: -10px;
+	animation: animate 2s infinite;
+}
+
+.noob-finder span:nth-child(2)
+{
+	animation-delay: -0.2s;
+}
+
+.noob-finder span:nth-child(3)
+{
+	animation-delay: -0.4s;
+}
+
+@keyframes animate{
+	
+	0%{
+		opacity: 0;
+		transform: rotate(45deg) translate(-20px, -20px);
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: rotate(45deg) translate(20px, 20px);
+	}
+}
+
 .image-animation-container {
     position: sticky;
     top: 0;
@@ -237,8 +278,8 @@ body::-webkit-scrollbar-thumb {
     overflow: hidden;
     --scale: 1;
     --position: 50%;
-    -webkit-mask-image: url(assets/img/mask.webp);
-    mask-image: url(assets/img/mask.webp);
+    -webkit-mask-image: url(/Waken/assets/img/mask.webp);
+    mask-image: url(/Waken/assets/img/mask.webp);
     -webkit-mask-size: 400% 400%;
     mask-size: 400% 400%;
     -webkit-mask-position: 0% 0%;
