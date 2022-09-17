@@ -612,6 +612,10 @@ html[dir="rtl"] .waken-synopsis .content .title {
     color: var(--c-white);
 }
 
+.waken-synopsis .content .text-wrapper p a{
+    color: var(--c-falch);
+}
+
 .plyr--video {
     border-radius: 6px;
     position: relative;
