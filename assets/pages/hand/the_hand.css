@@ -354,7 +354,7 @@ html[dir="rtl"]{
 }
 
 .plyr__poster{
-    background-position: cover !important;
+    background-size: cover !important;
 }
 
 body::-webkit-scrollbar {
