@@ -721,3 +721,7 @@ html[dir="rtl"] .waken-links a .svg-icon svg {
     font-size: 1em;
     font-weight: 300;
 }
+
+.plyr__poster{
+    background-position: cover !important;
+}
